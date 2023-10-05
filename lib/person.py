@@ -16,4 +16,7 @@ APPROVED_JOBS = [
 ]
 
 class Person:
-    pass
+    
+    def __init__(self, name="", job=""):
+        if len(name)<1 or len(name>25):
+            print("Name must be string between 1 and 25 characters.")
