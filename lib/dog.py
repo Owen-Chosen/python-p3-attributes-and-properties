@@ -14,7 +14,7 @@ APPROVED_BREEDS = [
 class Dog:
 
     def __init__(self, name="", breed=""):
-        if name == "" or type(name) in (int,float) or len(name)>25:
+        if name == "" or type(name) in (int,float) or 1>len(name) or len(name)>25:
             print("Name must be string between 1 and 25 characters.")
         if breed in APPROVED_BREEDS == False:
             print("Breed must be in list of approved breeds.")
@@ -26,7 +26,7 @@ class Dog:
         return self._name
     
     def set_name(self, name):
-        if name == "" or type(name) in (int,float) or len(name)>25:
+        if name == "" or type(name) in (int,float) or 1>len(name) or len(name)>25:
             print("Name must be string between 1 and 25 characters.")
         else:
             self._name = name
